@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "start": "vite",
     "dev": "concurrently npm:dev:*",
+    "dev-prod": "pnpm build && pnpm serve",
     "dev:server": "vite",
     "dev:css": "pnpm build:css --watch",
     "build": "pnpm build:css && pnpm build:vite",
@@ -12,7 +12,8 @@
     "build:vite": "vite build",
     "lint-fix": "eslint --fix ./src",
     "lint": "eslint ./src",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "start": "vite"
   },
   "license": "MIT",
   "devDependencies": {

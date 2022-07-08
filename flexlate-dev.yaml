@@ -7,7 +7,9 @@ data:
       full_name: solidjs-typescript-example
       main_branch_name: main
       short_description: Example for SolidJS Typescript Copier Template
-    ignore: []
+    ignore:
+      - node_modules
+      - .git
 run_configs:
   default:
     data_name: default

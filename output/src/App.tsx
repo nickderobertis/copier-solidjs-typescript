@@ -3,15 +3,12 @@ import type { Component } from "solid-js";
 
 import styles from "./App.module.css";
 import Home from "./Home";
+import { NavBar } from "./NavBar";
 
 const App: Component = () => {
   return (
     <div class={styles.App}>
-      <header class={styles.header}>App.tsx</header>
-      <nav class={styles.nav}>
-        <Link href="/about">About</Link>
-        <Link href="/">Home</Link>
-      </nav>
+      <NavBar />
       <Routes>
         <Route path="/" component={Home} />
         <Route

@@ -1,0 +1,38 @@
+{
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "concurrently npm:dev:*",
+    "dev-prod": "pnpm build && pnpm serve",
+    "dev:server": "vite",
+    "dev:css": "pnpm build:css --watch",
+    "build": "pnpm build:css && pnpm build:vite",
+    "build:css": "tailwindcss -i ./src/index.css -o ./src/styles.css",
+    "build:vite": "vite build",
+    "lint-fix": "eslint --fix ./src",
+    "lint": "eslint ./src",
+    "serve": "vite preview",
+    "start": "vite"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "concurrently": "^7.2.2",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-solid": "^0.7.0",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.5",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.9",
+    "vite-plugin-solid": "^2.2.6"
+  },
+  "dependencies": {
+    "solid-app-router": "^0.4.1",
+    "solid-js": "^1.4.2"
+  }
+}
